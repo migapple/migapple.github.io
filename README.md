@@ -4,7 +4,7 @@ Page d'accueil personnelle de **Michel Garlandat**, développeur iOS indépendan
 
 ## Contenu
 
-Vitrine de 47 applications iOS publiées sur l'App Store, couvrant :
+Vitrine de 50 applications iOS publiées sur l'App Store, couvrant :
 
 - **Histoire** — Rois de France, Présidents Français, Maréchaux Napoléon, Dynasties Russes, Dynasties Chinoises…
 - **Géographie** — Capitales Europe, Pays UE, États Unis, Mers & Océans, Détroits…
