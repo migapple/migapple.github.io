@@ -268,7 +268,7 @@
 </div>
 
 <div class="grid-wrap">
-  <div class="grid-count" id="grid-count">67 applications</div>
+  <div class="grid-count" id="">67 applications</div>
   <p class="grid-legend">Les applications sans icône sont en attente de validation App Store.</p>
   <div class="apps-grid" id="grid"></div>
 </div>
@@ -279,6 +279,9 @@
 </footer>
 
 <script>
+ 
+document.getElementById('grid-count').textContent = `${APPS.length} applications`;
+ 
 var APPS = [
   {id:'6770566450',name:'Amerique du Nord Geo Quiz', cat:'geographie' },
   {id:'6770458593',name:'Europe Geo Quiz', cat:'geographie' },
