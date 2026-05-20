@@ -398,8 +398,11 @@ APPS.forEach(function(app) {
 });
  
 // FILTERS
+// FILTERS
 var currentCat = 'all';
-document.getElementById('filters').addEventListener('click', function(e) {
+var filtersEl = document.getElementById('filters');
+filtersEl.removeEventListener('click', filtersEl._handler);
+filtersEl._handler = function(e) {
   var btn = e.target.closest('.filter-btn');
   if (!btn) return;
   var cat = btn.dataset.cat;
@@ -418,7 +421,8 @@ document.getElementById('filters').addEventListener('click', function(e) {
     if (show) visible++;
   });
   document.getElementById('grid-count').textContent = visible + ' application' + (visible > 1 ? 's' : '');
-});
+};
+filtersEl.addEventListener('click', filtersEl._handler);
 </script>
 
 </body>
