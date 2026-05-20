@@ -202,7 +202,7 @@
   .cat-art { background: rgba(255,160,80,0.10); color: #ffa050; }
 
  .grid-legend {
-  font-size: 24px;
+  font-size: 18px;
   color: rgba(255, 0, 0, 0.8);
   margin: 0 0 16px 0;
   font-style: italic;
@@ -268,7 +268,7 @@
 </div>
 
 <div class="grid-wrap">
-  <div class="grid-count" id="">67 applications</div>
+  <div class="grid-count" id="grid-count"> applications</div>
   <p class="grid-legend">Les applications sans icône sont en attente de validation App Store.</p>
   <div class="apps-grid" id="grid"></div>
 </div>
@@ -280,7 +280,6 @@
 
 <script>
  
-document.getElementById('grid-count').textContent = `${APPS.length} applications`;
  
 var APPS = [
   {id:'6770566450',name:'Amerique du Nord Geo Quiz', cat:'geographie' },
@@ -352,6 +351,8 @@ var APPS = [
   { id:'6760617965', name:'MesRestaurants', cat:'utilitaires' },
   { id:'6759219383', name:'FreshFood Manager', cat:'utilitaires' }
 ];
+
+document.getElementById('grid-count').textContent = `${APPS.length} applications`;
 
 var CAT_LABELS = {
   histoire:'Histoire', geographie:'Géographie', culture:'Culture',
