@@ -28,7 +28,6 @@
   html { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; -webkit-font-smoothing: antialiased; }
   body { min-height: 100vh; }
 
-  /* HEADER */
   header {
     padding: 72px 40px 32px;
     max-width: 960px;
@@ -80,7 +79,6 @@
   .header-meta a:hover { color: var(--gold2); }
   .header-meta span { color: var(--text3); }
 
-  /* FILTERS */
   .filters-wrap {
     max-width: 960px;
     margin: 0 auto;
@@ -107,7 +105,6 @@
   .filter-btn:hover { border-color: var(--gold); color: var(--text); }
   .filter-btn.active { background: var(--gold); border-color: var(--gold); color: #0d0d0f; font-weight: 500; }
 
-  /* GRID */
   .grid-wrap {
     max-width: 960px;
     margin: 0 auto;
@@ -178,7 +175,6 @@
   }
   .app-card:hover .app-badge img { opacity: 0.8; }
 
-  /* CATEGORY TAGS */
   .cat-tag {
     display: inline-block;
     font-size: 11px;
@@ -193,7 +189,6 @@
   .cat-utilitaires { background: rgba(100,165,255,0.10); color: #64a5ff; }
   .cat-art { background: rgba(255,160,80,0.10); color: #ffa050; }
 
-  /* FOOTER */
   footer {
     border-top: 1px solid var(--border);
     padding: 32px 40px;
@@ -263,8 +258,6 @@
 </footer>
 
 <script>
-
- console.log('script exécuté', new Date().getTime());
 var APPS = [
   { id:'6770566450', name:'Amerique du Nord Geo Quiz', cat:'geographie' },
   { id:'6770458593', name:'Europe Geo Quiz', cat:'geographie' },
@@ -398,13 +391,10 @@ APPS.forEach(function(app) {
 
   loadIcon(app.id, img);
 });
- 
-// FILTERS
+
 // FILTERS
 var currentCat = 'all';
-var filtersEl = document.getElementById('filters');
-filtersEl.removeEventListener('click', filtersEl._handler);
-filtersEl._handler = function(e) {
+document.getElementById('filters').onclick = function(e) {
   var btn = e.target.closest('.filter-btn');
   if (!btn) return;
   var cat = btn.dataset.cat;
@@ -424,7 +414,6 @@ filtersEl._handler = function(e) {
   });
   document.getElementById('grid-count').textContent = visible + ' application' + (visible > 1 ? 's' : '');
 };
-filtersEl.addEventListener('click', filtersEl._handler);
 </script>
 
 </body>
