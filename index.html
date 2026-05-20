@@ -424,20 +424,18 @@ document.getElementById('filters').addEventListener('click', function(e) {
  document.getElementById('grid-count').textContent = `${APPS.length} applications`;
 document.querySelector('[data-cat="all"]').textContent = `Toutes (${APPS.length})`;
  
-  document.querySelectorAll('.filter-btn').forEach(function(b) {
-    b.classList.toggle('active', b.dataset.cat === cat);
-  });
-
- 
-  var cards = document.querySelectorAll('.app-card');
-  var visible = 0;
-  cards.forEach(function(c) {
-    var show = cat === 'all' || c.dataset.cat === cat;
-    c.classList.toggle('hidden', !show);
-    if (show) visible++;
-  });
-  document.getElementById('grid-count').textContent = visible + ' application' + (visible > 1 ? 's' : '');
+document.querySelectorAll('.filter-btn').forEach(function(b) {
+  b.classList.toggle('active', b.dataset.cat === cat);
 });
+
+var cards = document.querySelectorAll('.app-card');
+var visible = 0;
+cards.forEach(function(card) {
+  var show = cat === 'all' || card.dataset.cat === cat;
+  card.style.display = show ? '' : 'none';
+  if (show) visible++;
+});
+document.getElementById('grid-count').textContent = `${visible} application${visible > 1 ? 's' : ''}`;});
 </script>
 
 </body>
