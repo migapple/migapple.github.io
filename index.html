@@ -421,9 +421,6 @@ document.getElementById('filters').addEventListener('click', function(e) {
   if (cat === currentCat) return;
   currentCat = cat;
 
- document.getElementById('grid-count').textContent = `${APPS.length} applications`;
-document.querySelector('[data-cat="all"]').textContent = `Toutes (${APPS.length})`;
- 
 document.querySelectorAll('.filter-btn').forEach(function(b) {
   b.classList.toggle('active', b.dataset.cat === cat);
 });
