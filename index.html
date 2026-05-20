@@ -429,13 +429,15 @@ document.querySelectorAll('.filter-btn').forEach(function(b) {
 });
 
 var cards = document.querySelectorAll('.app-card');
-var visible = 0;
-cards.forEach(function(card) {
-  var show = cat === 'all' || card.dataset.cat === cat;
-  card.style.display = show ? '' : 'none';
-  if (show) visible++;
-});
-document.getElementById('grid-count').textContent = `${visible} application${visible > 1 ? 's' : ''}`;});
+  var visible = 0;
+  cards.forEach(function(card) {
+    var show = cat === 'all' || card.dataset.cat === cat;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  document.getElementById('grid-count').textContent = `${visible} application${visible > 1 ? 's' : ''}`;
+}); // ← fermeture du addEventListener
+ 
 </script>
 
 </body>
