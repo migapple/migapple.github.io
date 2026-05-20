@@ -177,7 +177,7 @@
     color: var(--text3);
   }
   .app-badge {
-    align-self: flex-start;
+    align-self: flex-start; 
   }
   .app-badge img {
     height: 28px;
@@ -353,7 +353,8 @@ var APPS = [
 ];
 
 document.getElementById('grid-count').textContent = `${APPS.length} applications`;
-
+document.querySelector('[data-cat="all"]').textContent = `Toutes (${APPS.length})`;
+ 
 var CAT_LABELS = {
   histoire:'Histoire', geographie:'Géographie', culture:'Culture',
   art:'Art & Architecture', jeux:'Jeux', utilitaires:'Utilitaires'
@@ -419,9 +420,15 @@ document.getElementById('filters').addEventListener('click', function(e) {
   var cat = btn.dataset.cat;
   if (cat === currentCat) return;
   currentCat = cat;
+
+ document.getElementById('grid-count').textContent = `${APPS.length} applications`;
+document.querySelector('[data-cat="all"]').textContent = `Toutes (${APPS.length})`;
+ 
   document.querySelectorAll('.filter-btn').forEach(function(b) {
     b.classList.toggle('active', b.dataset.cat === cat);
   });
+
+ 
   var cards = document.querySelectorAll('.app-card');
   var visible = 0;
   cards.forEach(function(c) {
