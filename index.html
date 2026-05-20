@@ -201,6 +201,13 @@
   .cat-utilitaires { background: rgba(100,165,255,0.10); color: #64a5ff; }
   .cat-art { background: rgba(255,160,80,0.10); color: #ffa050; }
 
+ .grid-legend {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 16px 0;
+  font-style: italic;
+ }
+
   /* FOOTER */
   footer {
     border-top: 1px solid var(--border);
@@ -250,7 +257,7 @@
 
 <div class="filters-wrap">
   <div class="filters" id="filters">
-    <button class="filter-btn active" data-cat="all">Toutes (58)</button>
+    <button class="filter-btn active" data-cat="all">Toutes (67)</button>
     <button class="filter-btn" data-cat="histoire">Histoire</button>
     <button class="filter-btn" data-cat="geographie">Géographie</button>
     <button class="filter-btn" data-cat="culture">Culture</button>
@@ -261,7 +268,8 @@
 </div>
 
 <div class="grid-wrap">
-  <div class="grid-count" id="grid-count">58 applications</div>
+  <div class="grid-count" id="grid-count">67 applications</div>
+  <p class="grid-legend">Les applications sans icône sont en attente de validation App Store.</p>
   <div class="apps-grid" id="grid"></div>
 </div>
 
@@ -272,6 +280,16 @@
 
 <script>
 var APPS = [
+  {id:'6770566450',name:'Amerique du Nord Geo Quiz', cat:'geographie' },
+  {id:'6770458593',name:'Europe Geo Quiz', cat:'geographie' },
+  {id:'6770453028',name:'France Geo Quiz', cat:'geographie' },
+  {id:'6770848617',name:'Moyen Orient Geo Quiz', cat:'geographie' },
+  {id:'6770302783',name:'Architectes Celebres', cat:'culture' },
+  {id:'6770857576',name:'Asie Geo Quiz', cat:'geographie' },
+  {id:'6770826067',name:'Europe Hors UE Geo Quiz', cat:'geographie' },
+  {id:'6770836826',name:'Afrique Geo Quiz', cat:'geographie' },
+  {id:'6770580053',name:'Amerique du Sud Geo Quiz', cat:'geographie' },
+ 
   { id:'6768068634', name:'App Solitaire', cat:'jeux' },
   { id:'6768574161', name:'Tuiles Numerique', cat:'jeux' },
   { id:'6768068634', name:'Peintres Célèbres', cat:'culture' },
